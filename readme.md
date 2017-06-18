@@ -33,23 +33,22 @@ ical.net uses [semantic versioning](http://semver.org/). In a nutshell:
 
 ## Contributing
 
-Fork and submit a pull request! If you haven't gotten feedback from me in a few days, please send me an email: rstockbower@gmail.com. Sometimes I don't see them.
+* [Submit a bug report or issue](https://github.com/rianjs/ical.net/wiki/Filing-a-(good)-bug-report)
+* [Contribute code by submitting a pull request](https://github.com/rianjs/ical.net/wiki/Contributing-a-(good)-pull-request)
+* [Ask a question](https://github.com/rianjs/ical.net/issues)
 
-A couple of guidelines to keep code quality high, and code reviews efficient:
+## Support
 
-* If you are submitting a fix, please include a unit test that tests for that bug. Unit tests are how we can be sure we haven't broken B while changing A. The unit test project has some good examples of how unit tests are structured. If you've never written (or run!) a unit test in Visual Studio, and you're uncertain how to do so, have a look at the [NUnit Test Adapter](http://nunit.org/index.php?p=vsTestAdapter&r=2.6.4), which is a free add-in with explicit nunit test support.
-* Don't submit a change that has broken some of the unit tests. There are bugs in ical.net, as there are in all software. I have found cases where the unit tests themselves assert the wrong things. I have fixed several of these cases. Breaking a unit test that asserts the wrong thing is OK, but please make it assert the right thing so it's passing again.
-* Please keep your commits and their messages meaningful. It is better to have many small commits, each with a message explaining the "why" of that specific change than it is to have a single, messy commit that does a dozen different things squashed together.  (Adding new features being the exception.) _Clean commits speed up the code review process._
+ical.net is a something I do in my spare time around my family, day job, friends, and other hobbies. That means support is "when I get to it". I recognize that sometimes this isn't good enough, especially if you have a production issue. To that end, I [offer paid support and bugfixes](http://rianjs.net/consulting). A few basic rules before you contact me:
 
-### Immediate wins
+* Changes made to the ical.net library are open source.
+* You do not own the changes I make to the library.
+* Congruence with my vision for the future for ical.net is required. That means I won't do things like add Exchange interop, or take  dependencies on third-party libraries that benefit on your use case.
+* New versions of the library that result from changes made will be published on nuget for others to consume.
 
-#### v2 - Current version
+Please email me if paid support is something you require, and we can work out the details via email.
 
-Bug fixes and unit tests are the order of the day, particularly focusing on symmetric serialization and deserialization. dday.ical had many unit tests showing that various aspects of _deserialization_ worked properly, but did not have many (any?) tests that showed that _serialization_ worked. I am working on making sure these operations are reliably symmetrical.
-
-Secondly, I am working on a .NET Core port. This work is largely done, but the tooling support for .NET Core isn't great. I have postponed work on that until such time as .NET Core versions can be emitted as part of a standard "Batch Build" alongside normal .NET binaries.
-
-#### v3 - Future version
+## The future: v3 and beyond
 
 I have written a fairly detailed collection of things I'd like to get done for v3, which will involve some significant API changes, and simplifications of serialization and deserialization.
 
